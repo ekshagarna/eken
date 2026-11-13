@@ -1,20 +1,13 @@
-# Eken
-Installationsbar webbapp (PWA) för Samsung/Android.
+# Eken 1.1
+Nyheter: Android-anpassad ek-ikon och utlägg per post med separat belopp exklusive moms och momsbelopp. Befintliga poster ligger kvar i webbläsarens lokala lagring när samma GitHub Pages-adress används.
 
-## Starta och installera
-1. Lägg mappen på valfri HTTPS-webbplats, t.ex. GitHub Pages, OneDrive/SharePoint-webb eller egen webbserver.
-2. Öppna `index.html` via webbplatsens adress i Samsung Internet eller Chrome.
-3. Välj **Installera app** eller **Lägg till på startskärmen**.
+## Uppdatering på GitHub
+Ladda upp samtliga filer och mappen `icons` till roten av repositoryt `eken` och välj att skriva över befintliga filer. GitHub Pages publicerar normalt ändringen inom några minuter.
 
-För lokal provkörning på dator: kör `python -m http.server 8080` i mappen och öppna http://localhost:8080.
+## Mobil
+Öppna Eken-adressen i Chrome, uppdatera sidan, radera den gamla genvägen och välj **Installera och skapa genväg**. Om Chrome visar en gammal version: Webbplatskontroller > Radera data, öppna sidan igen och skapa genvägen på nytt.
 
-## Data och fakturaregister
-- Data sparas lokalt i mobilen.
-- Exporten använder semikolonseparerad UTF-8 CSV med samma 12 första kolumner som flikarna Tid EMP/Tid EMB/Tid Övrigt, plus resekolumner.
-- CSV kan delas till OneDrive, Outlook eller Teams genom mobilens Dela-meny.
-- JSON används för full säkerhetskopia och återställning.
-
-## Säkerhet
-Lokal lagring är inte en central backup. Exportera JSON regelbundet. För automatisk OneDrive-synk behövs en Microsoft Entra-appregistrering och MSAL-konfiguration.
+## Export
+CSV-exporten innehåller separata kolumner för `Utlägg exkl. moms`, `Moms utlägg` och `Utlägg inkl. moms`.
 
 Visual in this file was generated with Microsoft Copilot.
